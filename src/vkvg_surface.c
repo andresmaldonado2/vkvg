@@ -407,6 +407,10 @@ vkvg_status_t vkvg_surface_write_to_png (VkvgSurface surf, const char* path){
 	return VKVG_STATUS_SUCCESS;
 }
 
+vkvg_status_t vkvg_surface_status (VkvgSurface surf){
+	return surf->status;
+}
+
 vkvg_status_t vkvg_surface_write_to_memory (VkvgSurface surf, unsigned char* const bitmap){
 	if (surf->status) {
 		LOG(VKVG_LOG_ERR, "vkvg_surface_write_to_memory failed, invalid status: %d\n", surf->status);
